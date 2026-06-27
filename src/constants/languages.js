@@ -1,0 +1,106 @@
+// Language definitions and translations
+export const LANGUAGES = {
+  en: { name: "English", flag: "🇬🇧", dir: "ltr" },
+  hi: { name: "हिंदी", flag: "🇮🇳", dir: "ltr" },
+  ta: { name: "தமிழ்", flag: "🇮🇳", dir: "ltr" },
+  te: { name: "తెలుగు", flag: "🇮🇳", dir: "ltr" },
+  ml: { name: "മലയാളം", flag: "🇮🇳", dir: "ltr" },
+  mr: { name: "मराठी", flag: "🇮🇳", dir: "ltr" },
+  bn: { name: "বাংলা", flag: "🇮🇳", dir: "ltr" },
+  gu: { name: "ગુજરાતી", flag: "🇮🇳", dir: "ltr" },
+  pa: { name: "ਪੰਜਾਬੀ", flag: "🇮🇳", dir: "ltr" },
+  kn: { name: "ಕನ್ನಡ", flag: "🇮🇳", dir: "ltr" },
+};
+
+export const T = {
+  en: {
+    login: "Login", logout: "Logout", signup: "Sign Up", register: "Register",
+    student: "Student", teacher: "Teacher", admin: "Admin",
+    password: "Password", email: "Email", phone: "Phone",
+    enterPassword: "Enter Password", enterEmail: "Enter valid email",
+    forgotPassword: "Forgot Password?", resetPassword: "Reset Password",
+    sendOtp: "Send OTP to My Email", verifyOtp: "Verify OTP",
+    resendOtp: "Resend OTP", otpSent: "OTP sent to",
+    loginBtn: "Verify Password → OTP will be sent",
+    verifyLogin: "Verify & Login", backToLogin: "Back to Login",
+    newPassword: "New Password", confirmPassword: "Confirm Password",
+    passwordUpdated: "Password Reset Successful!",
+    dashboard: "Dashboard", home: "Home", profile: "Profile",
+    liveClasses: "Live Classes", attendance: "Attendance",
+    schedule: "Schedule", fees: "Fees", notices: "Notices",
+    batches: "Batches", students: "Students", teachers: "Teachers",
+    reports: "Reports", settings: "Settings", subscription: "Subscription",
+    save: "Save", cancel: "Cancel", edit: "Edit", delete: "Delete",
+    add: "Add", update: "Update", submit: "Submit", search: "Search",
+    approve: "Approve", reject: "Reject", back: "Go Back",
+    loading: "Loading...", noData: "No data found",
+    required: "is required", success: "Success!", error: "Error",
+    callUs: "Call Us", contactUs: "Contact Us", courses: "Courses",
+    toppers: "Toppers", offers: "Offers", about: "About",
+    joinNow: "Join Now", learnMore: "Learn More",
+    paid: "Paid", pending: "Pending", totalFees: "Total Fees",
+    payNow: "Pay Now", paymentHistory: "Payment History",
+    subscribe: "Subscribe Now", activeSubscription: "Active Subscriber!",
+    subscriptionExpires: "Expires", monthlyPlan: "Monthly Plan",
+    approvalPending: "Admin approval pending. Please wait.",
+    wrongCredentials: "Incorrect ID/Email/Phone or Password!",
+    otpExpired: "OTP expired! Please request again",
+    passwordMismatch: "Passwords do not match!",
+    minPassword: "Password must be at least 6 characters",
+    emailNotFound: "No email found in account. Contact admin.",
+    notRegistered: "This ID/Phone/Email is not registered",
+    tooManyAttempts: "Too many attempts!",
+    waitMinutes: "min wait required.",
+  },
+  hi: {
+    login: "लॉगिन", logout: "लॉगआउट", signup: "साइन अप", register: "रजिस्टर",
+    student: "छात्र", teacher: "शिक्षक", admin: "व्यवस्थापक",
+    password: "पासवर्ड", email: "ईमेल", phone: "फ़ोन",
+    enterPassword: "पासवर्ड डालें", enterEmail: "वैध ईमेल डालें",
+    forgotPassword: "पासवर्ड भूल गए?", resetPassword: "पासवर्ड रीसेट करें",
+    sendOtp: "मेरी ईमेल पर OTP भेजें", verifyOtp: "OTP सत्यापित करें",
+    resendOtp: "OTP दोबारा भेजें", otpSent: "OTP भेजा गया",
+    loginBtn: "पासवर्ड जांचें → OTP आएगा",
+    verifyLogin: "सत्यापित करें & लॉगिन", backToLogin: "लॉगिन पर वापस",
+    newPassword: "नया पासवर्ड", confirmPassword: "पासवर्ड की पुष्टि करें",
+    passwordUpdated: "पासवर्ड सफलतापूर्वक रीसेट हुआ!",
+    dashboard: "डैशबोर्ड", home: "होम", profile: "प्रोफ़ाइल",
+    liveClasses: "लाइव क्लासेस", attendance: "उपस्थिति",
+    schedule: "समय-सारणी", fees: "फ़ीस", notices: "सूचनाएं",
+    batches: "बैच", students: "छात्र", teachers: "शिक्षक",
+    reports: "रिपोर्ट", settings: "सेटिंग्स", subscription: "सदस्यता",
+    save: "सेव करें", cancel: "रद्द करें", edit: "संपादित करें", delete: "हटाएं",
+    add: "जोड़ें", update: "अपडेट करें", submit: "सबमिट करें", search: "खोजें",
+    approve: "स्वीकृत करें", reject: "अस्वीकृत करें", back: "वापस जाएं",
+    loading: "लोड हो रहा है...", noData: "कोई डेटा नहीं मिला",
+    required: "आवश्यक है", success: "सफलता!", error: "त्रुटि",
+    callUs: "हमें कॉल करें", contactUs: "संपर्क करें", courses: "कोर्स",
+    toppers: "टॉपर्स", offers: "ऑफर", about: "हमारे बारे में",
+    joinNow: "अभी जुड़ें", learnMore: "और जानें",
+    paid: "भुगतान हो गया", pending: "बकाया", totalFees: "कुल फ़ीस",
+    payNow: "अभी भुगतान करें", paymentHistory: "भुगतान इतिहास",
+    subscribe: "अभी सदस्यता लें", activeSubscription: "सक्रिय सदस्य!",
+    subscriptionExpires: "समाप्ति", monthlyPlan: "मासिक योजना",
+    approvalPending: "व्यवस्थापक की स्वीकृति प्रतीक्षित है।",
+    wrongCredentials: "गलत ID/ईमेल/फ़ोन या पासवर्ड!",
+    otpExpired: "OTP की समय सीमा समाप्त! कृपया दोबारा अनुरोध करें",
+    passwordMismatch: "पासवर्ड मेल नहीं खाते!",
+    minPassword: "पासवर्ड कम से कम 6 अक्षर का होना चाहिए",
+    emailNotFound: "खाते में ईमेल नहीं है। व्यवस्थापक से संपर्क करें।",
+    notRegistered: "यह ID/फ़ोन/ईमेल पंजीकृत नहीं है",
+    tooManyAttempts: "बहुत अधिक प्रयास!",
+    waitMinutes: "मिनिट प्रतीक्षा करें।",
+  },
+  // Add other languages as needed...
+};
+
+// Fill missing keys from English (fallback)
+Object.keys(T).forEach(lang => {
+  if (lang !== "en") {
+    Object.keys(T.en).forEach(key => {
+      if (!T[lang][key]) {
+        T[lang][key] = T.en[key];
+      }
+    });
+  }
+});

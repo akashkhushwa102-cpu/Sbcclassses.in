@@ -1,0 +1,19 @@
+services:
+  - type: app_service
+    name: sbc-backend
+    env: docker
+    plan: starter
+    dockerfilePath: backend/Dockerfile
+    startCommand: npm start
+    buildCommand: ""
+    envVars:
+      - key: DATABASE_URL
+        value: ""
+      - key: JWT_SECRET
+        value: ""
+      - key: VITE_SUPABASE_URL
+        value: "https://yfixhipsavbhtwfukzra.supabase.co"
+      - key: VITE_SUPABASE_ANON_KEY
+        value: ""
+      - key: VITE_SUPABASE_SERVICE_KEY
+        value: ""

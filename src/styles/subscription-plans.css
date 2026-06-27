@@ -1,0 +1,74 @@
+/* Simple polished styles for subscription plan admin forms */
+.sbcp-form input[type="text"],
+.sbcp-form input[type="number"],
+.sbcp-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(15,23,42,0.08);
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.04);
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.sbcp-form label { font-weight: 700; color: #0f172a; }
+
+.sbcp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.sbcp-actions { display: flex; gap: 12px; }
+
+/* Buttons used inside modal forms (when Btn component doesn't style them) */
+.sbcp-btn { padding: 10px 14px; border-radius: 10px; font-weight: 700; cursor: pointer; }
+.sbcp-btn-primary { background: #0b6efd; color: white; border: none; box-shadow: 0 6px 18px rgba(11,110,253,0.18); transition: transform 120ms ease, box-shadow 120ms ease; }
+.sbcp-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 10px 30px rgba(11,110,253,0.18); }
+.sbcp-btn-ghost { background: transparent; color: #374151; border: 1px solid #e5e7eb; }
+
+/* Modal content spacing */
+.sbcp-modal { padding: 18px; }
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .sbcp-grid { grid-template-columns: 1fr; }
+}
+
+/* Preview card shown in the create/edit modal */
+.sbcp-preview {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(2,6,23,0.06);
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.06);
+}
+.sbcp-preview h4 { margin: 0 0 6px; font-size: 18px; color: #0f172a; }
+.sbcp-preview .price { font-size: 20px; font-weight: 800; color: #0b6efd; }
+.sbcp-preview .meta { color: #475569; font-size: 13px; margin-bottom: 6px; }
+.sbcp-preview ul { margin: 8px 0 0; padding-left: 18px; color: #0f172a; }
+
+/* Modal title */
+.sbcp-modal-title { font-size: 18px; font-weight: 800; color: #0f172a; margin-bottom: 8px; }
+
+/* Small helper text */
+.sbcp-help { font-size: 12px; color: #64748b; }
+
+/* Section headers inside modal */
+.sbcp-section { background: #ffffff; border-radius: 12px; padding: 18px; box-shadow: 0 10px 30px rgba(2,6,23,0.06); border: 1px solid rgba(226,232,240,0.8); }
+.sbcp-section + .sbcp-section { margin-top: 12px; }
+.sbcp-section h3 { margin: 0 0 8px; font-size: 15px; color: #0f172a; display: flex; align-items: center; gap: 10px; }
+.sbcp-section p.sub { margin: 0 0 12px; color: #64748b; font-size: 13px; }
+
+.sbcp-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; align-items: center; }
+@media (max-width: 900px) { .sbcp-row { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .sbcp-row { grid-template-columns: 1fr; } }
+
+.sbcp-input, .sbcp-select { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid #E6E9F2; background: #ffffff; font-size: 14px; color: #0f172a; }
+.sbcp-select { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23949DB8'><path d='M5.23 7.21a.75.75 0 011.06-.02L10 10.67l3.71-3.48a.75.75 0 111.04 1.08l-4.25 4a.75.75 0 01-1.04 0l-4.25-4a.75.75 0 01-.02-1.06z'/></svg>"); background-repeat: no-repeat; background-position: right 12px center; background-size: 14px; }
+
+.sbcp-chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 8px; border: 1px dashed #E6E9F2; border-radius: 8px; min-height: 46px; align-items: center; }
+.sbcp-chip { background: #eef2ff; color: #3730a3; padding: 6px 8px; border-radius: 999px; font-weight: 700; font-size: 13px; }
+
+.sbcp-toggle { display: inline-flex; align-items: center; gap: 8px; }
+.sbcp-toggle input { width: 42px; height: 26px; appearance: none; background: #e6e6e6; border-radius: 999px; position: relative; outline: none; cursor: pointer; }
+.sbcp-toggle input:checked { background: #2563eb; }
+.sbcp-toggle input::after { content: ''; position: absolute; width: 18px; height: 18px; background: white; border-radius: 50%; top: 4px; left: 4px; transition: transform 0.18s ease; }
+.sbcp-toggle input:checked::after { transform: translateX(16px); }

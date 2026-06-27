@@ -1,0 +1,31 @@
+{
+  "name": "sbc-classes-app",
+  "private": true,
+  "version": "4.0.0",
+  "type": "module",
+  "description": "Samagra Bharat Coaching Classes — Production Frontend (React + Vite)",
+  "author": "Akash Mourya",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src/ --ext .jsx,.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.108.2",
+    "esbuild": "^0.25.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "uuid": "^14.0.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "eslint": "^8.57.0",
+    "terser": "^5.31.3",
+    "vite": "^7.3.6"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

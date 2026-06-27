@@ -1,0 +1,26 @@
+/* Minimal admin plans styles to satisfy imports */
+.admin-plan-card { padding: 16px; border-radius: 12px; background: #fff; }
+.admin-plan-card h3 { margin: 0 0 8px; }
+.chip-row { display:flex; gap:8px; flex-wrap:wrap; }
+.badge { padding:4px 8px; border-radius:8px; }
+.badge-sub { background:#e0e7ff; color:#3730a3; }
+.badge-premium { background:#ffe4e6; color:#9f1239; }
+.admin-form input[type="text"],
+.admin-form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid rgba(15,23,42,0.08);
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.04);
+  font-size: 14px;
+  color: #0f172a;
+}   
+.admin-form label { font-weight: 700; color: #0f172a; margin-bottom: 6px; display: block; }
+.admin-form .form-row { display: grid; grid-template-columns: 1fr 1
+fr; gap: 12px; margin-bottom: 12px; }
+.admin-form .actions { display: flex; gap: 12px; justify-content: flex}    
+.admin-form .btn { padding: 10px 14px; border-radius: 10px; font-weight: 700; cursor: pointer; }
+.admin-form .btn-primary { background: #0b6efd; color: white; border: none; box-shadow: 0 6px 18px rgba(11,110,253,0.18); transition: transform 120ms ease, box-shadow 120ms ease; }
+.admin-form .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 10px 30px rgba(11,110,253,0.18); }
+.admin-form .btn-ghost { background: transparent; color: #374151; border: 1px solid #e5e7eb; }

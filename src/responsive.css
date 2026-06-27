@@ -1,0 +1,338 @@
+/* ============================================================
+   RESPONSIVE DESIGN SYSTEM
+   Mobile-first approach for all devices
+   ============================================================ */
+
+/* Root Font Sizing */
+:root {
+  --font-xs: clamp(11px, 2.5vw, 12px);
+  --font-sm: clamp(12px, 2.5vw, 13px);
+  --font-base: clamp(13px, 3vw, 14px);
+  --font-md: clamp(14px, 3vw, 15px);
+  --font-lg: clamp(16px, 3.5vw, 18px);
+  --font-xl: clamp(18px, 4vw, 20px);
+  --font-2xl: clamp(20px, 5vw, 24px);
+  --font-3xl: clamp(22px, 5.5vw, 28px);
+  --font-4xl: clamp(24px, 6vw, 32px);
+  --font-5xl: clamp(28px, 7vw, 48px);
+  
+  --spacing-xs: clamp(4px, 1vw, 6px);
+  --spacing-sm: clamp(6px, 1.5vw, 8px);
+  --spacing-md: clamp(8px, 2vw, 12px);
+  --spacing-lg: clamp(12px, 3vw, 16px);
+  --spacing-xl: clamp(16px, 4vw, 24px);
+  --spacing-2xl: clamp(20px, 5vw, 32px);
+  --spacing-3xl: clamp(24px, 6vw, 48px);
+  --spacing-4xl: clamp(32px, 8vw, 64px);
+  
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+}
+
+/* Base Responsive Typography */
+html {
+  font-size: clamp(13px, 2vw, 16px);
+}
+
+body {
+  font-size: clamp(13px, 3vw, 14px);
+  line-height: 1.6;
+}
+
+h1 { font-size: var(--font-5xl); }
+h2 { font-size: var(--font-4xl); }
+h3 { font-size: var(--font-3xl); }
+h4 { font-size: var(--font-2xl); }
+h5 { font-size: var(--font-xl); }
+h6 { font-size: var(--font-lg); }
+
+/* Container Queries Alternative - Max Width */
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+.container-sm {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+}
+
+/* Grid Responsive */
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: 640px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Touch-friendly Button Sizing */
+button {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Text Truncation Helpers */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+
+/* Responsive Padding */
+.p-mobile { padding: var(--spacing-md); }
+.p-tablet { padding: var(--spacing-lg); }
+.p-desktop { padding: var(--spacing-xl); }
+
+@media (min-width: 640px) {
+  .p-mobile { padding: var(--spacing-lg); }
+}
+
+@media (min-width: 1024px) {
+  .p-mobile { padding: var(--spacing-2xl); }
+}
+
+/* Responsive Flex */
+.flex-col-mobile {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .flex-col-mobile {
+    flex-direction: row;
+  }
+}
+
+/* Responsive Display */
+.hide-mobile { display: none; }
+.hide-tablet { display: block; }
+.hide-desktop { display: block; }
+
+@media (min-width: 640px) {
+  .hide-mobile { display: block; }
+  .hide-tablet { display: none; }
+  .hide-desktop { display: block; }
+}
+
+@media (min-width: 1024px) {
+  .hide-mobile { display: block; }
+  .hide-tablet { display: block; }
+  .hide-desktop { display: none; }
+}
+
+/* Responsive Margin */
+.mx-auto { margin-left: auto; margin-right: auto; }
+.mt-auto { margin-top: auto; }
+.mb-auto { margin-bottom: auto; }
+
+/* Scrollable with custom scrollbar */
+.scrollable {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.1) transparent;
+}
+
+.scrollable::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollable::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Media Query Debugging (remove in production) */
+@media (max-width: 639px) {
+  body::before {
+    content: 'MOBILE (< 640px)';
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #FF6B00;
+    color: #fff;
+    padding: 2px 6px;
+    font-size: 10px;
+    z-index: -1;
+    display: none;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  body::before {
+    content: 'TABLET (640px - 1024px)';
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #3B82F6;
+    color: #fff;
+    padding: 2px 6px;
+    font-size: 10px;
+    z-index: -1;
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  body::before {
+    content: 'DESKTOP (> 1024px)';
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #10B981;
+    color: #fff;
+    padding: 2px 6px;
+    font-size: 10px;
+    z-index: -1;
+    display: none;
+  }
+}
+
+/* iPad & Tablet specific (portrait mode) */
+@media (min-width: 640px) and (max-width: 1024px) and (orientation: portrait) {
+  :root {
+    --font-4xl: 28px;
+    --font-3xl: 24px;
+    --spacing-xl: 20px;
+  }
+}
+
+/* iPhone 12 Pro + Notch safe area */
+@supports (padding: max(0px)) {
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  body {
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+    overflow-x: hidden;
+  }
+  
+  /* Ensure proper height for mobile with bottom navbar */
+  main {
+    padding-bottom: max(100px, calc(80px + env(safe-area-inset-bottom)));
+    overflow: visible;
+  }
+}
+
+/* High DPI Screens */
+@media (min-resolution: 192dpi) {
+  :root {
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+  }
+}
+
+/* Landscape mode adjustments */
+@media (orientation: landscape) and (max-height: 600px) {
+  :root {
+    --spacing-2xl: 12px;
+    --spacing-xl: 8px;
+  }
+  
+  body {
+    font-size: 12px;
+  }
+}
+
+/* BOTTOM NAVIGATION BAR — Mobile Fix */
+@media (max-width: 1024px) {
+  /* Ensure bottom nav is always visible on mobile/tablet */
+  div[style*="position:fixed"][style*="bottom:0"] {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 999 !important;
+    display: flex !important;
+  }
+}
+
+/* Mobile Content Height & Overflow Fix */
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Prevent horizontal overflow on all mobile devices */
+@media (max-width: 768px) {
+  body, html {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  main {
+    overflow-x: hidden;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+  }
+}

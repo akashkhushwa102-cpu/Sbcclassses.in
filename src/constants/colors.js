@@ -1,0 +1,20 @@
+// Color Constants - Centralized theme colors
+export const C = {
+  primary: "#FF6B00",
+  primaryDark: "#CC5500",
+  primaryLight: "#FF9240",
+  gold: "#FFD700",
+  goldLight: "#FFE566",
+  bg: "#08090F",
+  bgCard: "#111220",
+  bgCard2: "#1A1B2E",
+  bgCard3: "#22243A",
+  text: "#F0F0FA",
+  textMuted: "#7878A8",
+  textDim: "#4A4A70",
+  border: "#1E2040",
+  success: "#10B981",
+  danger: "#EF4444",
+  warning: "#F59E0B",
+  info: "#3B82F6",
+};
