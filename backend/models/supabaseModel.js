@@ -63,10 +63,10 @@ class Query {
     return inst;
   }
 
-  async lean() {
-    const inst = await this.exec();
-    return inst ? inst.toObject() : null;
-  }
+  // async lean() {
+  //   const inst = await this.exec();
+  //   return inst ? inst.toObject() : null;
+  // }
 
   then(resolve, reject) {
     return this.exec().then(resolve, reject);
