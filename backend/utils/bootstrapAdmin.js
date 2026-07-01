@@ -6,7 +6,7 @@ export const ensureBootstrapAdmin = async () => {
   try {
     const email = env.bootstrapAdmin.email;
     if (!email) return;
-    const existing = await User.findOne({ email }).lean();
+    const existing = await User.findOne({ email });
     if (existing) {
       logger.info(`Bootstrap admin exists: ${email}`);
       return;

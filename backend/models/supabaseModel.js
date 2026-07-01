@@ -5,6 +5,8 @@ class ModelInstance {
   constructor(table, data) {
     this._table = table;
     Object.assign(this, data || {});
+    if (!this._id && this.id) this._id = this.id;
+    if (!this.id && this._id) this.id = this._id;
   }
 
   toObject() {
@@ -26,7 +28,17 @@ class ModelInstance {
       .single();
     if (error) throw error;
     Object.assign(this, data);
+    if (!this._id && this.id) this._id = this.id;
+    if (!this.id && this._id) this.id = this._id;
     return this;
+  }
+
+  async deleteOne() {
+    const id = this.id || this._id;
+    if (!id) throw new Error('Cannot delete document without id');
+    const { error } = await supabase.from(this._table).delete().eq('id', id);
+    if (error) throw error;
+    return true;
   }
 
   // bcrypt compare helper if password exists

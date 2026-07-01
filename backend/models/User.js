@@ -13,10 +13,10 @@ const UserModel = createModel('users', { beforeCreate });
 // Expose helper methods used by controllers to mimic Mongoose API
 export default {
   ...UserModel,
-  async findById(id) {
+  findById(id) {
     return UserModel.findById(id);
   },
-  async findOne(q = {}) {
+  findOne(q = {}) {
     return UserModel.findOne(q);
   },
   async create(doc) {
