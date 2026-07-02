@@ -1,6 +1,5 @@
 // import { supabase, supabaseAdmin } from '../config/supabase.js';
 // import bcrypt from 'bcryptjs';
-
 // class ModelInstance {
 //   constructor(table, data) {
 //     this._table = table;

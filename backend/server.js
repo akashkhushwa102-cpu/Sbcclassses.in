@@ -28,7 +28,7 @@ app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }));
 app.use(cors({
   origin: (origin, cb) => {
     // Allow same-origin (no Origin header) and the configured frontend.
-    const allowed = [env.frontendUrl, 'http://localhost:5173', 'http://127.0.0.1:5173'];
+    const allowed = [env.frontendUrl, 'https://sbcclassses.in', 'https://www.sbcclassses.in'];
     if (!origin || allowed.includes(origin)) return cb(null, true);
     return cb(null, true); // permissive — tighten in your deployment if needed
   },
